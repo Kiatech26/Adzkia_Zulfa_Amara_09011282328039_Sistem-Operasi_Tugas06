@@ -110,6 +110,194 @@ Saya=mahasiswa > PS1=”\w >”
 # Sleep 5
 # clear 
 
+# perintah berikut untuk membuka atau membuat file .bash_logout:
+<img width="232" alt="perintah31" src="https://github.com/user-attachments/assets/3340f72f-603c-4ad1-b77f-00452b51d207">
+
+# Tambahkan Perintah 
+# echo: Menampilkan pesan "Terima kasih atas sesi yang diberikan".
+# sleep 5: Menunda selama 5 detik sebelum melanjutkan ke perintah berikutnya.
+# clear: Membersihkan layar terminal sebelum keluar.
+
+<img width="459" alt="perintah 32" src="https://github.com/user-attachments/assets/fbea43a4-6b9f-4817-b3fc-cd7a81895583">
+
+# Ketika Anda mengetik logout, terminal akan menampilkan pesan "Terima kasih atas sesi yang diberikan", 
+# menunggu selama 5 detik, kemudian membersihkan layar dan menutup sesi.
+
+<img width="209" alt="perintah 33" src="https://github.com/user-attachments/assets/58cda68f-334f-40c6-acf3-69aa0eb8f899">
+
+# 4. Bash script
+# script itu adalah daftar perintah-perintah yang kita tulis agar komputer tahu apa yang harus dikerjakannya, dan komputer akan mengikuti perintah-perintah itu secara berurutan.
+# a. Buat 3 buah script p1.sh, p2.sh, p3.sh dengan isi masing-masing :
+# p1.sh
+
+<img width="225" alt="perintah 4a1" src="https://github.com/user-attachments/assets/a9010bf4-7693-4753-8208-ea9defd010de">
+
+# ##! /bin/bash
+# echo “Program p1”
+# ls –l
+
+<img width="390" alt="perintah 4a2" src="https://github.com/user-attachments/assets/7c582e75-fb33-4547-aa42-7f5f92274872">
+
+# p2.sh
+
+<img width="196" alt="perintah 4a3" src="https://github.com/user-attachments/assets/2b078a9c-8e56-44a5-a29a-342998740470">
+
+
+# #! /bin/bash
+# echo “Program p2”
+# who
+
+<img width="429" alt="perintah 4a4" src="https://github.com/user-attachments/assets/8f844fc3-3141-45a7-b36f-e6759e95ba86">
+
+# p3.sh
+
+<img width="191" alt="perintah 4a5" src="https://github.com/user-attachments/assets/f60ba33a-8721-487b-b155-3306d0956aea">
+
+
+# #! /bin/bash
+# echo “Program p3”
+# ps x
+
+<img width="390" alt="perintah 4a6" src="https://github.com/user-attachments/assets/e0491929-bd67-4f46-bb38-057623c95f74">
+
+
+# b. Jalankan script tersebut sebagai berikut :
+# $ ./p1.sh ; ./p3.sh ; ./p2.sh
+# Jalankan semua script secara berurutan satu per satu
+<img width="350" alt="perintah 4b1" src="https://github.com/user-attachments/assets/00de7fb9-ca9e-49d0-9324-83abbf07e1cc">
+# Perintah ini akan menjalankan p1.sh, kemudian p3.sh, lalu p2.sh secara berurutan. Setiap script akan dijalankan setelah script sebelumnya selesai.
+
+# $ ./p1.sh &
+# untuk menjalankan script p1.sh di background (berjalan tanpa menunggu)
+<img width="288" alt="perintah 4b2" src="https://github.com/user-attachments/assets/1fcf71e7-70bc-4649-9f8c-ec05e360b3b8">
+# Tanda & di akhir perintah menunjukkan bahwa script tersebut akan dijalankan di background, sehingga terminal tetap bisa digunakan untuk perintah lain.
+
+# $ ./p1.sh $ ./p2.sh & ./p3.sh &
+# Untuk menjalankan beberapa script secara bersamaan di background
+<img width="329" alt="perintah 4b3" src="https://github.com/user-attachments/assets/8da433a4-6fd6-4412-9deb-4b2fe010f426">
+# Semua script akan berjalan secara paralel di background.
+
+# $ ( ./p1.sh ; ./p3.sh ) & 
+#  menjalankan p1.sh dan p3.sh secara berurutan, tetapi keduanya di background
+
+<img width="278" alt="perintah 4b4" src="https://github.com/user-attachments/assets/0eb91184-38a0-4658-b8ec-ec666ab4d73f">
+
+# Dengan tanda kurung (), p1.sh dan p3.sh dijalankan secara berurutan, dan setelah keduanya selesai, mereka akan tetap di background karena adanya &.
+
+# 5. Jobs
+# a. Buat shell-script yang melakukan loop dengan nama pwaktu.sh,
+# Buat file baru bernama pwaktu.sh dengan editor teks, misalnya nano
+<img width="199" alt="perintah 5a1" src="https://github.com/user-attachments/assets/96820e7a-4b2d-4182-8e7d-8bb27343d749">
+
+# setiap 10 detik, kemudian menyimpan tanggal dan jam pada file hasil. 
+# #!/bin/bash
+# while [ true ]
+# do
+# date >> hasil
+# sleep 10
+# done 
+Masukkan isi berikut ke dalam file
+<img width="159" alt="perintah 5a2" src="https://github.com/user-attachments/assets/e20bf916-8549-4e4a-9c2c-0ca4ecada54c">
+
+
+b. Jalankan sebagai background; kemudian jalankan satu program (utilitas find) di background
+sebagai berikut :
+# Tanda & berarti script akan berjalan di background, sehingga terminal tidak akan terkunci dan bisa digunakan untuk perintah lain.
+# $ jobs
+
+<img width="213" alt="perintah 5b1" src="https://github.com/user-attachments/assets/ecfa94e8-4e08-4f02-8d60-98e09ef5c75f">
+
+# Untuk melihat proses yang sedang berjalan di background
+
+# $ find / -print > files 2>/dev/null &
+
+<img width="283" alt="perintah 5b2 benar" src="https://github.com/user-attachments/assets/e25e5233-df72-475d-86f7-25ec2ff2595c">
+# find untuk mencari file di sistem dan menyimpan hasilnya ke file files
+# $ jobs 
+
+<img width="277" alt="perintah 5b3 benar" src="https://github.com/user-attachments/assets/3dec1ec4-c64d-42a3-a28f-5953fc899987">
+
+# Jobs kedua digunakan untuk menjalankan proses atau program lain di background, sekaligus memanage beberapa pekerjaan (jobs) yang berjalan di background.
+
+# c. Jadikan program ke 1 sebagai foreground, tekan ^Z dan kembalikan program tersebut ke background
+
+<img width="206" alt="perintah 5c1" src="https://github.com/user-attachments/assets/97bef848-d894-4d99-a4fc-f2a7597b5b85">
+
+# Untuk melihat proses yang sedang berjalan di background
+
+# $ fg %1
+# Menggunakan fg %1 untuk membawa job pertama ke foreground.
+<img width="216" alt="perintah 5c2" src="https://github.com/user-attachments/assets/be0fbba1-6741-485d-9084-ab7db7f9512f">
+# Menggunakan Ctrl + Z untuk menghentikan sementara job yang berjalan di foreground.
+
+# $ bg 
+
+<img width="183" alt="perintah 5c3 benar" src="https://github.com/user-attachments/assets/8abe4e45-f478-4397-81c1-c2d29dd5cbf1">
+# Perintah bg dalam sistem operasi berbasis Unix/Linux digunakan untuk melanjutkan proses yang sebelumnya dihentikan (suspended) dan menjalankannya kembali di background. 
+# Perintah bg %1 digunakan untuk melanjutkan job pertama (job dengan nomor ID 1) yang sebelumnya dihentikan (suspended) dan menjalankannya kembali di background.
+
+
+# d. Stop program background dengan utilitas kil
+# $ ps x
+<img width="221" alt="perintah 5d1" src="https://github.com/user-attachments/assets/42863eba-0d75-4329-be13-cb9a4fc2aee2">
+# ps x Untuk melihat semua proses yang sedang berjalan, gunakan perintah:
+
+# $ kill [Nomor PID] 
+cari nomor PID dari program yang ingin duhentikan.
+
+# Untuk melihat proses serta melihat Nomor PID yang telah dihapus dengan #PX
+<img width="220" alt="perintah 5d2" src="https://github.com/user-attachments/assets/100c4753-b7e1-4dc2-9c7e-408468f652e8">
+
+# Untuk menghentikan (stop) program yang berjalan di background menggunakan perintah kill
+Hentikan Proses dengan kill: Setelah mengetahui PID, Anda dapat menghentikan proses tersebut . Disisni saya kill ID 25209
+
+# Untuk melihat proses serta melihat Nomor PID yang telah dihapus dengan px
+<img width="238" alt="perintah 5d3 memeriksa px" src="https://github.com/user-attachments/assets/24b5f572-7b83-4779-b7f1-7e5306b56b79">
+
+
+
+# 6. History
+# a. Ganti nilai HISTSIZE dari 1000 menjadi 20
+# $ HISTSIZE=20
+# HISTSIZE adalah variabel lingkungan dalam Bash yang menentukan jumlah maksimum perintah yang akan disimpan dalam riwayat (history) sesi terminal Secara default, nilai ini biasanya lebih besar, seperti 1000. kenapa 20 karena menyimpan riwayat perintah yang lebih kecil dapat membantu mengurangi penggunaan memori dan meningkatkan kinerja terminal.
+HISTSIZE=20: Mengubah ukuran history menjadi 20 perintah.
+<img width="176" alt="perintah 6a1" src="https://github.com/user-attachments/assets/db65eaef-6c87-4bc2-8a57-435e8c6441ed">
+
+
+# $ h
+
+<img width="190" alt="perintah 6a2" src="https://github.com/user-attachments/assets/6d2ccdb5-c222-49ae-9c72-209b51593eca">
+
+# perintah history (atau hanya h jika sudah ada alias) digunakan untuk menampilkan daftar perintah yang telah Anda jalankan sebelumnya dalam sesi terminal. 
+
+# b. Gunakan fasilitas history dengan mengedit instruksi baris ke 5 dari instruksi yang terakhir
+# dilakukan
+
+# # $ !-5
+<img width="152" alt="perintah 6b" src="https://github.com/user-attachments/assets/aea26a20-bf27-448b-95ba-156885ebb1d3">
+
+#Ulangi perintah kelima terakhir
+
+# c. Ulangi instruksi yang terakhir. Gunakan juga ^P dan ^N untuk bernavigasi pada history bufer
+# $ !!
+# Ulangi perintah terakhir
+<img width="159" alt="perintah 6c" src="https://github.com/user-attachments/assets/7b97729f-9605-4cb7-bab4-67e811a4e772">
+
+
+# d. Ulangi instruksi pada history bufer nomor 150
+# $ !150
+# Ulangi perintah nomor 150
+<img width="147" alt="perintah 6d" src="https://github.com/user-attachments/assets/73548127-9bd5-4aa5-8df6-6e9cbba4b119">
+
+
+# e. Ulangi instruksi dengan prefix “ls”
+# $ !ls 
+#Ulangi perintah yang dimulai dengan ls
+<img width="386" alt="perintah 6e" src="https://github.com/user-attachments/assets/e206c4b0-72be-468f-a630-c6d15abeb46e">
+# !: Tanda seru (!) digunakan untuk mengakses riwayat perintah
+# Dengan menuliskan !ls, meminta shell untuk mencari perintah terakhir dalam riwayat yang dimulai dengan ls.
+
+
 
 
 
