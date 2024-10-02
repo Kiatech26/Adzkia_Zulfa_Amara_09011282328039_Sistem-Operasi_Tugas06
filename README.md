@@ -292,9 +292,12 @@ HISTSIZE=20: Mengubah ukuran history menjadi 20 perintah.
 
 # e. Ulangi instruksi dengan prefix “ls”
 # $ !ls 
-#Ulangi perintah yang dimulai dengan ls
+# Ulangi perintah yang dimulai dengan ls
+
 <img width="386" alt="perintah 6e" src="https://github.com/user-attachments/assets/e206c4b0-72be-468f-a630-c6d15abeb46e">
+
 # !: Tanda seru (!) digunakan untuk mengakses riwayat perintah
+
 # Dengan menuliskan !ls, meminta shell untuk mencari perintah terakhir dalam riwayat yang dimulai dengan ls.
 
 
